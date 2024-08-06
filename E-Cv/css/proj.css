@@ -1,0 +1,142 @@
+/* Styles globaux */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêcher le défilement horizontal */
+}
+
+.texte {
+    width: 100%; /* Utiliser toute la largeur disponible pour les petits écrans */
+    max-width: 35em; /* Limiter la largeur pour les grands écrans */
+    text-align: justify;
+    font-size: 1.125rem; /* Taille de police de base, équivalent à 18px */
+    font-family: 'Dosis', sans-serif;
+    color: aliceblue;
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+}
+
+.contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Espace entre les colonnes */
+    align-items: flex-start; /* Aligner les colonnes en haut */
+    gap: 2em; /* Ajouter un espace entre les colonnes */
+    padding: 2em; /* Ajouter un padding global pour respirer */
+    flex-wrap: wrap;
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+}
+
+.colg, .cold {
+    flex: 1; /* Permet aux colonnes de prendre la même largeur */
+    max-width: 48%; /* Limite la largeur maximale à 48% */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+}
+
+.video1 {
+    width: 100%; /* La vidéo prend toute la largeur disponible */
+    height: auto;
+}
+
+.video {
+    margin-top: 2em;
+}
+
+.zone {
+    margin-top: 0; /* Supprime le margin négatif */
+    padding-left: 1em; /* Ajouter un padding si nécessaire pour aligner le contenu */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+}
+
+.explications {
+    margin: 0; /* Supprime les marges pour aligner correctement le contenu */
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligner les boutons à gauche */
+    margin-top: 2em;
+    margin-left: 0; /* Supprime le margin négatif */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+}
+
+.download {
+    text-align: center;
+    max-width: 10em;
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem; /* Taille de police de base pour les boutons */
+    text-align: center;
+    text-shadow: 0px 0px 15px black;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #bef102;
+    border: 2px solid #bef102;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px black;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+}
+
+.button:hover {
+    background-color: #84a709;
+    color: #ffffff;
+    border-color: #84a709;
+    cursor: pointer;
+}
+
+/* Styles responsives */
+@media only screen and (max-width: 1024px) {
+    .contain {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em; /* Réduire le padding pour les écrans moyens */
+    }
+
+    .colg, .cold {
+        max-width: 100%; /* Prend toute la largeur disponible sur les écrans moyens */
+        margin-bottom: 2em; /* Ajouter de l'espace entre les colonnes en mode colonne */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contain {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em; /* Réduire le padding pour les petits écrans */
+        gap: 1em; /* Réduire l'espace entre les colonnes */
+    }
+
+    .colg, .cold {
+        max-width: 100%; /* Prend toute la largeur disponible */
+        margin: 0; /* Supprimer les marges pour les petits écrans */
+        text-align: center; /* Centrer le texte dans les colonnes */
+    }
+
+    .texte {
+        font-size: 1rem; /* Réduire la taille de la police pour les petits écrans */
+    }
+
+    .zone {
+        padding-left: 0; /* Retirer le padding à gauche sur mobile */
+    }
+
+    .btn-container {
+        align-items: center; /* Centrer les boutons sur mobile */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .texte {
+        font-size: 0.7rem; /* Réduire davantage la taille de la police pour les très petits écrans */
+    }
+
+    .button {
+        font-size: 1.25rem; /* Réduire la taille des boutons pour les très petits écrans */
+    }
+}

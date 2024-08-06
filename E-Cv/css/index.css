@@ -1,0 +1,139 @@
+/* Style de l'image du CV */
+.img-cv {
+    max-width: 25vw; /* Réduit la largeur de l'image */
+    height: auto;
+    border-radius: 2%;
+    box-shadow: 0px 0px 6px black;
+}
+
+/* Conteneur de l'image du CV */
+.div-cv {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+}
+
+/* Conteneur du texte et du bouton */
+.download {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centre le texte et le bouton horizontalement */
+    text-align: center; /* Centre le texte dans le conteneur */
+    padding: 1vh;
+    max-width: 20vw;
+    font-size: 1vw;
+}
+
+/* Conteneur principal pour l'image et le texte */
+.contain {
+    display: flex;
+    flex-direction: column; /* Passe en colonne pour faciliter le centrage */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+    box-sizing: border-box;
+    gap: 2vh; /* Espace entre l'image et le texte */
+}
+
+/* Style du texte h3 */
+h3 {
+    padding: 5px;
+    color: aliceblue;
+    font-size: 1.2vw;
+}
+
+h3:hover {
+    color: rgb(236, 217, 217);
+}
+
+/* Style du bouton */
+.button {
+    display: inline-block;
+    padding: 0.5vh 1vw;
+    font-size: 0.8vw;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin-top: 1vh;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    border-color: #0056b3;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .img-cv {
+        max-width: 40vw; /* Augmente la taille de l'image sur les écrans moyens */
+    }
+
+    .download {
+        max-width: 30vw;
+        font-size: 1.5vw;
+    }
+
+    h3 {
+        font-size: 1.5vw;
+    }
+
+    .button {
+        font-size: 1.2vw;
+    }
+}
+
+/* Écrans petits (mobiles) */
+@media (max-width: 768px) {
+    .contain {
+        flex-direction: column; /* Empile les éléments en colonne */
+        padding: 2vh;
+    }
+
+    .img-cv {
+        max-width: 60vw; /* Augmente la taille de l'image sur les petits écrans */
+    }
+
+    .download {
+        max-width: 80vw;
+        font-size: 3vw;
+    }
+
+    h3 {
+        font-size: 3vw;
+    }
+
+    .button {
+        font-size: 2vw;
+    }
+}
+
+/* Très petits écrans (mobiles, orientations portrait) */
+@media (max-width: 480px) {
+    .img-cv {
+        max-width: 80vw; /* L'image occupe une large part de l'écran */
+    }
+
+    .download {
+        max-width: 90vw;
+        font-size: 4vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
+    .button {
+        font-size: 3vw;
+        padding: 1vh 3vw;
+    }
+}
